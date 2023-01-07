@@ -1,0 +1,266 @@
+body {
+  box-sizing: border-box;
+  color: #032610;
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-variant-ligatures: normal;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+#logo {
+  font-family: "Concert One", cursive;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  font-variant-caps: all-small-caps;
+  letter-spacing: -0.1rem;
+  padding: 10px;
+  border-radius: 3rem;
+  margin: 0;
+}
+
+img[alt="logo"] {
+  width: 70px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  left: 150px;
+  bottom: -10px;
+}
+
+h1 {
+  margin: 0.5rem 1rem;
+}
+
+h3 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  margin: 0.5rem 1rem 2rem 1rem;
+}
+
+#main-container {
+  display: flex;
+  background-color: white;
+  background-image: url("transparency.png");
+  background-size: 20px;
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+.form-container {
+  height: 100%;
+
+  background-color: rgba(13, 191, 81, 0.05);
+
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(13, 191, 81, 0.4) 5px 5px, rgba(13, 191, 81, 0.3) 10px 10px,
+    rgba(13, 191, 81, 0.2) 15px 15px, rgba(13, 191, 81, 0.1) 20px 20px,
+    rgba(13, 191, 81, 0.05) 25px 25px;
+  margin-right: 1rem;
+
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.meme-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  justify-content: space-evenly;
+}
+
+label {
+  font-weight: 900;
+  display: block;
+  text-align: left;
+  margin: 1rem;
+  margin-bottom: 1px;
+}
+
+textarea,
+input[type="text"] {
+  resize: none;
+  padding: 1rem;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  color: #032610;
+  width: 335px;
+  margin: 5px 1rem 1rem 1rem;
+}
+
+input[type="text"] {
+  border-radius: 30px;
+}
+
+.meme {
+  display: flex;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+  flex-direction: row;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  color: white;
+  /*adapted from: https://css-tricks.com/adding-stroke-to-web-text/ */
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black,
+    2px 2px 0 black;
+
+  margin: 10px;
+}
+
+.meme-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 1rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.top-text {
+  position: absolute;
+}
+
+.bottom-text {
+  position: absolute;
+  top: 300px;
+}
+
+.delete-btn {
+  font-size: 12px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 900;
+  position: absolute;
+  bottom: 375px;
+  right: 5px;
+  height: 20px;
+  width: 100px;
+  padding: 0px;
+  border: none;
+  border-radius: 15px;
+  color: red;
+  cursor: pointer;
+  opacity: 60%;
+  transition: opacity ease 0.2s;
+}
+
+.delete-btn:hover {
+  opacity: 100%;
+}
+
+.create-btn {
+  border: 1px solid;
+  font-weight: 900;
+  display: block;
+  padding: 1rem;
+  background-color: #0dbf51;
+  border-radius: 30px;
+  filter: drop-shadow(#032610 3px 3px 0px);
+  cursor: pointer;
+  transform: all ease;
+  margin: 4px 10px 4px 10px;
+}
+.create-btn:active {
+  filter: drop-shadow(#032610 0px 0px 0px);
+  margin: 6px 10px 2px 10px;
+}
+
+.arrow::after {
+  content: "→";
+  color: wheat;
+  font-weight: 900;
+  font-size: 1rem;
+  position: relative;
+  left: 100px;
+  bottom: 39px;
+}
+
+/* Smaller screen sizes  */
+@media only screen and (max-width: 600px) {
+  #main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container {
+    height: fit-content;
+    background-color: rgba(230, 232, 233);
+    flex-direction: column;
+    margin-bottom: 1px;
+  }
+
+  .delete-btn {
+    top: 5px;
+  }
+
+  .meme {
+    width: 350px;
+    height: 350px;
+  }
+
+  .meme-image {
+    width: 350px;
+    height: 350px;
+  }
+
+  .arrow::after {
+    content: "↓";
+    color: white;
+    font-weight: 900;
+    font-size: 1rem;
+    position: relative;
+    bottom: 39px;
+  }
+
+  img[alt="logo"] {
+    width: 27px;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    position: relative;
+    left: -10px;
+    bottom: 0px;
+  }
+  #logo {
+    margin: 0 auto;
+    margin-top: -10px;
+    padding: 2 auto;
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    margin: 0 auto;
+  }
+
+  h3 {
+    display: none;
+  }
+  label {
+    margin-top: 5px;
+  }
+
+  input[type="text"],
+  textarea {
+    margin: 5px auto;
+    padding: 3px auto;
+  }
+}
