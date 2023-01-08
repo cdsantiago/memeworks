@@ -40,35 +40,15 @@ function generateMeme(event) {
   void logo.offsetWidth;
   logo.classList.add("animate__animated", "animate__bounce");
 
-  //trying to hide the scroll bar when not needed
-  // memeContainer.style.visibility = "visible";
-  // if (memeContainer.childNodes.length <= 2) {
-  //   // console.log("less than 3");
-  //   memeContainer.style.overflow = "hidden";
-  // } else {
-  //   memeContainer.style.overflow = "scroll";
-  // }
-
+  //assemble the meme element
   meme.appendChild(topText);
   meme.appendChild(memeImage);
   meme.appendChild(bottomText);
   meme.appendChild(deleteBtn);
 
-  // memeContainer.style.visibility = "visible";
   //newset meme appears first
   memeContainer.prepend(meme);
 
+  //reset the form values
   form.reset();
 }
-
-// if (
-//   mainContainer.childElementCount === 2 &&
-//   memeContainer.childElementCount <= 0 &&
-//   window.innerWidth > 390
-// ) {
-//   mainContainer.style.flexDirection = "row";
-//   mainContainer.style.alignItems = "center";
-//   mainContainer.style.justifyContent = "center";
-// }
-
-// memeContainer.style.visibility = "hidden";

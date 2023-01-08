@@ -44,7 +44,7 @@ h3 {
   display: flex;
   background-color: white;
   background-image: url("transparency.png");
-  background-size: 20px;
+  background-size: 50px;
   background-repeat: repeat;
   width: 100vw;
   height: 100vh;
